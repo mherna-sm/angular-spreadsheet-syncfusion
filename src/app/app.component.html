@@ -1,0 +1,51 @@
+<div class="control-section">
+    <button class="e-btn" style="margin: 5px 0;" (click)="btnClick()">Exportar</button>
+    <ejs-spreadsheet #spreadsheet >
+        <e-sheets>
+            <e-sheet name="Datos de asunto" [rowCount]=50 [colCount]=9 [showGridLines]="false">
+                <e-rows>
+                    <e-row [index]="0">
+                        <e-cells>
+                            <e-cell [index]="0" value="Asunto para el Proceso" [style]="{ fontSize: '12pt', fontWeight: 'bold',
+                            textAlign: 'center', verticalAlign: 'middle'}"></e-cell>
+                        </e-cells>
+                    </e-row>
+                    <e-row [index]="1">
+                        <e-cells>
+                            <e-cell [index]="0" value="Descripción de la solapa: Campos del asunto + adicionales"></e-cell>
+                        </e-cells>
+                    </e-row>
+                    <e-row [index]="3">
+                        <e-cells>
+                            <e-cell [index]="0" value="Código"></e-cell>
+                            <e-cell [index]="1" value="Agrupador"></e-cell>
+                            <e-cell [index]="2" value="Orden"></e-cell>
+                            <e-cell [index]="3" value="Descripción del Dato"></e-cell>
+                            <e-cell [index]="4" value="Tipo de Dato"></e-cell>
+                            <e-cell [index]="5" value="Tabla Número"></e-cell>
+                            <e-cell [index]="6" value="Largo"></e-cell>
+                            <e-cell [index]="7" value="Compartido otros Procesos"></e-cell>
+                            <e-cell [index]="8" value="Visible"></e-cell>
+                        </e-cells>
+                    </e-row>
+                </e-rows>
+                <e-columns>
+                    <e-column [width]=80></e-column>
+                    <e-column [width]=130></e-column>
+                    <e-column [width]=130></e-column>
+                    <e-column [width]=220></e-column>
+                    <e-column [width]=180></e-column>
+                    <e-column [width]=120></e-column>
+                    <e-column [width]=100></e-column>
+                    <e-column [width]=170></e-column>
+                    <e-column [width]=100></e-column>
+                </e-columns>
+                <e-ranges>
+                    <e-range template="<input class='e-datos-asunto'/>" address="E5:E50"></e-range>
+                    <e-range template="<input class='e-compartido'/>" address="H5:H50"></e-range>
+                    <e-range template="<input class='e-visible'/>" address="I5:I50"></e-range>
+                </e-ranges>
+            </e-sheet>
+        </e-sheets>
+    </ejs-spreadsheet>
+</div>
